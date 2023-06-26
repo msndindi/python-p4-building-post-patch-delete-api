@@ -13,6 +13,8 @@ app.json.compact = False
 
 migrate = Migrate(app, db)
 
+
+
 db.init_app(app)
 
 @app.route('/')
@@ -22,6 +24,7 @@ def index():
 @app.route('/games')
 def games():
 
+    
     games = []
     for game in Game.query.all():
         game_dict = {
